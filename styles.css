@@ -1,0 +1,263 @@
+/* Modern and Elegant Website Styling */
+
+/* Reset and Base Styles */
+* { 
+    margin: 0; /* Menghapus margin default pada semua elemen */
+    padding: 0; /* Menghapus padding default pada semua elemen */
+    box-sizing: border-box; /* Menjadikan padding dan border termasuk dalam ukuran elemen */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mengatur jenis font default */
+    line-height: 1.6; /* Mengatur tinggi garis untuk meningkatkan keterbacaan */
+    background-color: #f0f4f8; /* Memberikan warna latar belakang halaman */
+    color: #2c3e50; /* Mengatur warna teks utama */
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); /* Gradien warna untuk latar header */
+    color: #ffffff; /* Warna teks putih untuk header */
+    padding: 20px 0; /* Ruang vertikal dalam header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada header */
+}
+
+header h1 {
+    font-weight: 300; /* Berat font tipis */
+    letter-spacing: 1.5px; /* Menambahkan jarak antar huruf */
+    margin-bottom: 15px; /* Menambahkan ruang bawah */
+}
+
+nav ul {
+    list-style: none; /* Menghapus bullet pada daftar */
+    display: flex; /* Membuat daftar horizontal */
+    justify-content: center; /* Menyelaraskan daftar ke tengah */
+    flex-wrap: wrap; /* Membungkus item jika terlalu panjang */
+    gap: 20px; /* Menambahkan jarak antar item */
+}
+
+nav ul li a {
+    color: #ffffff; /* Warna teks tautan */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    position: relative; /* Membuat elemen pseudo relatif ke tautan */
+    transition: color 0.3s ease; /* Menambahkan efek transisi pada warna */
+}
+
+nav ul li a::after {
+    content: ''; /* Membuat elemen pseudo setelah tautan */
+    position: absolute; /* Posisi absolut terhadap tautan */
+    width: 100%; /* Lebar penuh dari tautan */
+    height: 2px; /* Tinggi garis */
+    bottom: -5px; /* Posisi di bawah teks tautan */
+    left: 0; /* Mulai dari kiri */
+    background-color: #ffffff; /* Warna putih untuk garis */
+    transform: scaleX(0); /* Awalnya tidak terlihat */
+    transition: transform 0.3s ease; /* Efek transisi pada transformasi */
+}
+
+nav ul li a:hover {
+    color: #f1c40f; /* Ubah warna teks saat hover */
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Memperlihatkan garis bawah saat hover */
+}
+
+/* Main Content Area */
+main {
+    max-width: 1200px; /* Batas lebar maksimum */
+    margin: 0 auto; /* Memusatkan konten secara horizontal */
+    padding: 30px 15px; /* Menambahkan ruang dalam */
+}
+
+/* Section Styles */
+section {
+    background-color: #ffffff; /* Latar belakang putih untuk setiap section */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* Efek bayangan */
+    padding: 25px; /* Ruang dalam */
+    margin-bottom: 30px; /* Jarak antar section */
+    transition: transform 0.3s ease; /* Efek transisi pada transformasi */
+}
+
+section:hover {
+    transform: translateY(-5px); /* Menggeser ke atas saat hover */
+}
+
+h2 {
+    color: #2c3e50; /* Warna teks judul */
+    border-bottom: 3px solid #3498db; /* Garis bawah pada judul */
+    padding-bottom: 10px; /* Jarak dari teks ke garis bawah */
+    margin-bottom: 20px; /* Ruang bawah */
+    font-weight: 400; /* Berat font medium */
+}
+
+/* Article Styles */
+article {
+    background-color: #f9f9f9; /* Warna latar untuk artikel */
+    border-radius: 8px; /* Sudut melengkung */
+    padding: 15px; /* Ruang dalam */
+    margin-bottom: 20px; /* Jarak antar artikel */
+    transition: box-shadow 0.3s ease; /* Efek transisi pada bayangan */
+}
+
+article:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan saat hover */
+}
+
+article h3 {
+    color: #2980b9; /* Warna judul artikel */
+    margin-bottom: 10px; /* Jarak bawah */
+}
+
+/* Read More Button/Box Styles */
+.read-more-box {
+    display: inline-block; /* Membuat elemen sejajar */
+    margin-top: 15px; /* Jarak atas */
+    transition: all 0.3s ease; /* Efek transisi */
+    border: 2px solid #3498db; /* Garis tepi biru */
+    border-radius: 6px; /* Sudut melengkung */
+    padding: 5px 10px; /* Ruang dalam */
+}
+
+.read-more-link {
+    display: inline-block; /* Membuat elemen sejajar */
+    color: #3498db; /* Warna teks */
+    text-decoration: none; /* Menghapus garis bawah */
+    font-weight: 500; /* Berat font medium */
+    letter-spacing: 0.5px; /* Jarak antar huruf */
+    transition: all 0.3s ease; /* Efek transisi */
+}
+
+.read-more-link:hover {
+    color: #2980b9; /* Ubah warna teks saat hover */
+}
+
+/* Image Box */
+.image-box {
+    text-align: center; /* Teks dan gambar di tengah */
+    margin-bottom: 20px; /* Jarak bawah */
+    border-radius: 10px; /* Sudut melengkung */
+    overflow: hidden; /* Memastikan konten tidak melampaui batas */
+}
+
+.image-box img {
+    max-width: 80%; /* Membatasi lebar maksimum gambar */
+    height: auto; /* Mempertahankan rasio aspek */
+    border-radius: 10px; /* Sudut melengkung */
+    transition: transform 0.3s ease; /* Efek transisi transformasi */
+}
+
+image-box img:hover {
+    transform: scale(1.05); /* Memperbesar gambar saat hover */
+}
+/* Video Styling */
+.video {
+    background-color: #000; /* Memberikan latar belakang hitam untuk elemen video */
+    border-radius: 10px; /* Sudut melengkung */
+    overflow: hidden; /* Mencegah konten video melampaui batas */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan pada elemen video */
+}
+
+video {
+    width: 100%; /* Video menyesuaikan dengan lebar elemen induk */
+    height: auto; /* Menjaga rasio aspek video */
+    transition: opacity 0.3s ease; /* Menambahkan efek transisi pada opasitas */
+}
+
+video:hover {
+    opacity: 0.9; /* Mengurangi opasitas saat video dihover */
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Gradien warna untuk latar footer */
+    color: #ecf0f1; /* Warna teks abu-abu terang */
+    padding: 20px 0; /* Ruang vertikal dalam footer */
+    text-align: center; /* Menyatukan teks ke tengah */
+}
+
+/* Comments Section */
+.comments-section {
+    background-color: #ffffff; /* Warna latar putih untuk bagian komentar */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan lembut */
+    padding: 25px; /* Ruang dalam */
+    max-width: 700px; /* Lebar maksimum untuk bagian komentar */
+    margin: 2rem auto; /* Margin atas dan bawah serta memusatkan secara horizontal */
+}
+
+/* Image Container */
+.image-container {
+    width: 50%; /* Membatasi lebar container gambar menjadi 50% dari induk */
+    overflow: hidden; /* Memastikan konten gambar tidak melampaui container */
+}
+
+.image-container img {
+    width: 90%; /* Gambar mengambil 90% dari lebar container */
+    height: auto; /* Menjaga rasio aspek gambar */
+    display: block; /* Menghilangkan jarak putih di bawah gambar */
+}
+
+/* Responsive Image Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .image-container {
+        width: 100%; /* Membuat gambar penuh lebar pada layar kecil */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) { /* Breakpoint untuk tablet atau perangkat dengan layar sedang */
+    nav ul {
+        flex-direction: column; /* Mengubah menu navigasi menjadi kolom */
+        align-items: center; /* Menyatukan menu ke tengah */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Jarak vertikal antar item navigasi */
+    }
+
+    main {
+        padding: 15px; /* Mengurangi ruang dalam untuk layar kecil */
+    }
+
+    .read-more-box {
+        border-width: 1.5px; /* Menyesuaikan ketebalan border */
+        padding: 4px 8px; /* Mengurangi ruang dalam tombol */
+    }
+
+    .read-more-link {
+        font-size: 14px; /* Mengurangi ukuran font untuk tombol */
+    }
+
+    .image-box img {
+        max-width: 80%; /* Membatasi lebar maksimum gambar */
+    }
+}
+
+@media (max-width: 480px) { /* Breakpoint untuk ponsel atau perangkat dengan layar kecil */
+    header h1 {
+        font-size: 24px; /* Menyesuaikan ukuran font judul header */
+    }
+
+    h2 {
+        font-size: 22px; /* Menyesuaikan ukuran font subjudul */
+    }
+
+    article h3 {
+        font-size: 18px; /* Menyesuaikan ukuran font judul artikel */
+    }
+
+    .read-more-box {
+        border-width: 1px; /* Mengurangi ketebalan border */
+        padding: 3px 6px; /* Mengurangi ruang dalam tombol */
+    }
+
+    .read-more-link {
+        font-size: 12px; /* Mengurangi ukuran font tombol */
+    }
+
+    .image-box img {
+        max-width: 100%; /* Gambar mengambil seluruh lebar layar */
+    }
+}

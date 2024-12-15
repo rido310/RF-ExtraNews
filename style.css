@@ -1,0 +1,261 @@
+/* General Reset */
+* {
+    margin: 0; /* Mengatur margin semua elemen menjadi nol */
+    padding: 0; /* Mengatur padding semua elemen menjadi nol */
+    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam ukuran elemen */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Mengatur font utama untuk dokumen */
+    color: #2c3e50; /* Warna teks utama */
+    line-height: 1.6; /* Jarak antar baris teks */
+    background-color: #f0f4f8; /* Warna latar belakang */
+}
+
+/* Navbar */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); /* Gradien warna untuk navbar */
+    color: #ffffff; /* Warna teks navbar */
+    position: fixed; /* Navbar tetap di atas saat menggulir */
+    top: 0; /* Menempel di atas */
+    width: 100%; /* Lebar penuh layar */
+    z-index: 1000; /* Posisi di atas elemen lain */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan di bawah navbar */
+}
+
+header nav {
+    display: flex; /* Menampilkan elemen secara horizontal */
+    justify-content: space-between; /* Memberikan ruang antara logo dan menu */
+    align-items: center; /* Meratakan item secara vertikal */
+    max-width: 1100px; /* Membatasi lebar maksimum */
+    margin: auto; /* Memusatkan navbar */
+    padding: 10px 20px; /* Memberikan ruang dalam navbar */
+}
+
+header .logo {
+    font-size: 24px; /* Ukuran font untuk logo */
+    font-weight: bold; /* Membuat teks logo tebal */
+    text-decoration: none; /* Menghapus garis bawah pada teks */
+    color: white; /* Warna teks logo */
+}
+
+header ul {
+    list-style: none; /* Menghapus bullet pada daftar */
+    display: flex; /* Menampilkan item daftar secara horizontal */
+}
+
+header ul li {
+    margin: 0 10px; /* Memberikan jarak horizontal antara item menu */
+}
+
+header ul li a {
+    text-decoration: none; /* Menghapus garis bawah pada link */
+    color: white; /* Warna teks link */
+    font-size: 18px; /* Ukuran font link */
+    transition: color 0.3s; /* Animasi transisi warna */
+}
+
+header ul li a:hover {
+    color: #ff6600; /* Warna link saat di-hover */
+}
+
+body {
+    padding-top: 60px; /* Menambahkan ruang di atas konten untuk fixed header */
+}
+
+/* Hero Section */
+#home {
+    background: url('stadion.jpg') no-repeat center center/cover; /* Gambar latar dengan posisi dan ukuran penuh */
+    color: white; /* Warna teks putih */
+    text-align: center; /* Teks rata tengah */
+    padding: 200px 20px; /* Memberikan ruang dalam hero section */
+}
+
+#home h1 {
+    font-size: 68px; /* Ukuran font besar untuk judul */
+    margin-bottom: 20px; /* Jarak bawah judul */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Menambahkan bayangan pada teks */
+}
+
+#home p {
+    font-size: 20px; /* Ukuran font paragraf */
+    margin-bottom: 20px; /* Jarak bawah paragraf */
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px; /* Memberikan ruang atas dan bawah */
+    text-align: center; /* Teks rata tengah */
+    background: #fff; /* Warna latar putih */
+}
+
+#about h2 {
+    font-size: 36px; /* Ukuran font untuk subjudul */
+    margin-bottom: 20px; /* Jarak bawah subjudul */
+}
+
+#about p {
+    text-indent: 45px; /* Memberikan inden pada paragraf */
+    text-align: justify; /* Membuat teks rata kiri dan kanan */
+    font-size: 18px; /* Ukuran font paragraf */
+    max-width: 800px; /* Lebar maksimum untuk paragraf */
+    margin: auto; /* Memusatkan paragraf */
+}
+
+.image-container {
+    display: flex; /* Menampilkan gambar secara horizontal */
+    justify-content: center; /* Memusatkan gambar */
+    gap: 10px; /* Memberikan jarak antar gambar */
+    margin-top: 24px; /* Jarak atas container gambar */
+    margin-bottom: 20px; /* Jarak bawah container gambar */
+}
+
+.left-images {
+    display: flex; /* Menampilkan gambar kiri secara vertikal */
+    flex-direction: column; /* Menyusun gambar dalam kolom */
+    gap: 10px; /* Jarak antar gambar vertikal */
+}
+
+.left-images img,
+.right-image img {
+    width: 150px; /* Lebar gambar kecil */
+    height: 220px; /* Tinggi gambar kecil */
+    object-fit: cover; /* Menjaga proporsi gambar */
+    border-radius: 10px; /* Sudut melengkung gambar */
+}
+
+.right-image img {
+    width: 250px; /* Lebar gambar besar */
+    height: 350px; /* Tinggi gambar besar */
+    object-fit: cover; /* Menjaga proporsi gambar */
+    border-radius: 10px; /* Sudut melengkung gambar */
+}
+/* Services Section */
+#services {
+    padding: 60px 20px; /* Memberikan ruang atas dan bawah */
+    text-align: center; /* Teks rata tengah */
+    background: #f4f4f4; /* Warna latar abu-abu terang */
+}
+
+#services h2 {
+    font-size: 36px; /* Ukuran font untuk subjudul */
+    margin-bottom: 20px; /* Jarak bawah subjudul */
+}
+
+.services-container {
+    display: flex; /* Menampilkan elemen secara horizontal */
+    justify-content: center; /* Memusatkan elemen */
+    flex-wrap: wrap; /* Membungkus elemen jika terlalu lebar */
+}
+
+.service {
+    background: white; /* Warna latar putih untuk setiap layanan */
+    margin: 10px; /* Jarak antar layanan */
+    padding: 20px; /* Ruang dalam untuk layanan */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan ringan untuk layanan */
+    text-align: center; /* Teks rata tengah */
+    max-width: 300px; /* Lebar maksimum untuk setiap layanan */
+}
+
+.service img {
+    margin-bottom: 10px; /* Jarak bawah gambar */
+    height: 70px; /* Tinggi gambar layanan */
+    width: 70px; /* Lebar gambar layanan */
+}
+
+.service h3 {
+    font-size: 24px; /* Ukuran font judul layanan */
+    margin-bottom: 10px; /* Jarak bawah judul layanan */
+}
+
+.service p {
+    font-size: 16px; /* Ukuran font deskripsi layanan */
+}
+
+.btn {
+    display: inline-block; /* Tampilkan sebagai elemen inline-block */
+    padding: 10px 20px; /* Ruang dalam tombol */
+    background-color: #333; /* Warna latar tombol gelap */
+    color: #fff; /* Warna teks putih */
+    border-radius: 5px; /* Sudut melengkung tombol */
+    transition: background-color 0.3s ease; /* Animasi transisi warna */
+}
+
+.btn:hover {
+    background-color: #666; /* Warna tombol saat di-hover */
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px; /* Ruang atas dan bawah */
+    text-align: center; /* Teks rata tengah */
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); /* Gradien warna untuk kontak */
+    color: white; /* Warna teks putih */
+}
+
+#contact h2 {
+    font-size: 36px; /* Ukuran font untuk subjudul */
+    margin-bottom: 20px; /* Jarak bawah subjudul */
+}
+
+#contact p {
+    font-size: 18px; /* Ukuran font paragraf */
+    margin-bottom: 20px; /* Jarak bawah paragraf */
+}
+
+#contact .btn {
+    background: #ff6600; /* Warna latar tombol */
+    color: white; /* Warna teks putih */
+    padding: 10px 20px; /* Ruang dalam tombol */
+    text-decoration: none; /* Menghapus garis bawah */
+    border-radius: 5px; /* Sudut melengkung tombol */
+    transition: background 0.3s; /* Animasi transisi warna */
+}
+
+#contact .btn:hover {
+    background: #cc5200; /* Warna tombol saat di-hover */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Teks rata tengah */
+    padding: 10px 0; /* Ruang atas dan bawah */
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); /* Gradien warna untuk footer */
+    color: white; /* Warna teks putih */
+    font-size: 14px; /* Ukuran font kecil */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Tampilkan elemen navbar secara vertikal */
+        align-items: flex-start; /* Teks rata kiri */
+    }
+
+    .featured-section {
+        display: flex; /* Tampilkan elemen secara fleksibel */
+        flex-direction: column; /* Susun elemen dalam kolom */
+    }
+
+    nav ul li {
+        margin: 0; /* Hilangkan margin pada item menu */
+    }
+
+    main {
+        margin-top: 120px; /* Tambahkan ruang atas untuk header tetap */
+    }
+
+    h1 {
+        font-size: 28px; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+
+    p {
+        font-size: 16px; /* Ukuran font paragraf lebih kecil */
+    }
+
+    .btn {
+        font-size: 14px; /* Ukuran font tombol lebih kecil */
+    }
+}
+

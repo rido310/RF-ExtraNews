@@ -1,0 +1,118 @@
+/* Modern Sports Schedule Styling */
+
+/* General Reset and Base Styles */
+body {
+    margin: 0; /* Menghapus margin default dari body */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mengatur font untuk seluruh dokumen */
+    background-color: #f0f4f8; /* Warna latar belakang abu terang */
+    color: #2c3e50; /* Warna teks utama */
+    line-height: 1.6; /* Menyesuaikan tinggi baris untuk kemudahan membaca */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); /* Gradien untuk latar belakang header */
+    color: #ffffff; /* Warna teks putih */
+    text-align: center; /* Teks rata tengah */
+    padding: 1.5rem 0; /* Memberi ruang atas dan bawah */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan ringan untuk header */
+}
+
+header h1 {
+    margin: 0; /* Menghapus margin default */
+    font-size: 2.5rem; /* Ukuran font judul header */
+    font-weight: 300; /* Berat font ringan */
+    letter-spacing: 1.5px; /* Jarak antar huruf */
+}
+
+/* Main Content */
+main {
+    max-width: 1200px; /* Lebar maksimum untuk konten utama */
+    margin: 0 auto; /* Pusatkan konten di tengah layar */
+    padding: 2rem; /* Ruang dalam untuk konten utama */
+}
+
+/* Schedule Section */
+.schedule {
+    margin-bottom: 2rem; /* Jarak bawah untuk setiap bagian jadwal */
+    background-color: #ffffff; /* Warna latar putih untuk kotak jadwal */
+    border-radius: 10px; /* Sudut melengkung untuk kotak */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* Bayangan ringan */
+    padding: 1.5rem; /* Ruang dalam kotak */
+    transition: transform 0.3s ease; /* Animasi transisi untuk hover */
+}
+
+.schedule:hover {
+    transform: translateY(-5px); /* Efek hover: kotak bergerak sedikit ke atas */
+}
+
+.schedule h2 {
+    font-size: 1.8rem; /* Ukuran font untuk judul jadwal */
+    margin-bottom: 1rem; /* Jarak bawah judul */
+    color: #2c3e50; /* Warna teks judul */
+    text-align: center; /* Teks rata tengah */
+    border-bottom: 3px solid #3498db; /* Garis bawah warna biru */
+    padding-bottom: 10px; /* Ruang antara teks dan garis bawah */
+}
+
+/* Match Display */
+.match {
+    margin-bottom: 1.5rem; /* Jarak bawah untuk setiap bagian pertandingan */
+    text-align: center; /* Teks rata tengah */
+    background-color: #f9f9f9; /* Warna latar abu terang */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 1rem; /* Ruang dalam */
+    transition: box-shadow 0.3s ease; /* Animasi transisi untuk hover */
+}
+
+.match:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek hover: bayangan lebih gelap */
+}
+
+.match img {
+    width: 100%; /* Lebar gambar 100% dari elemen induknya */
+    max-width: 600px; /* Lebar maksimum untuk gambar */
+    height: auto; /* Menjaga rasio aspek gambar */
+    border-radius: 12px; /* Sudut melengkung untuk gambar */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Bayangan untuk gambar */
+    transition: transform 0.3s ease; /* Animasi transisi untuk hover */
+}
+
+.match img:hover {
+    transform: scale(1.02); /* Efek hover: gambar sedikit diperbesar */
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Gradien warna untuk footer */
+    color: #ecf0f1; /* Warna teks abu terang */
+    text-align: center; /* Teks rata tengah */
+    padding: 1rem 0; /* Ruang atas dan bawah */
+    margin-top: 2rem; /* Jarak atas footer */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Bayangan atas untuk footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem; /* Ruang dalam lebih kecil untuk layar kecil */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Ukuran font lebih kecil untuk layar sedang */
+    }
+
+    .schedule h2 {
+        font-size: 1.5rem; /* Ukuran font lebih kecil untuk judul jadwal */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+
+    .schedule h2 {
+        font-size: 1.3rem; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+}
